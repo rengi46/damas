@@ -4,7 +4,7 @@ import rules from '../../assets/data/chess.json'
 import ChessPiece from '../ChessPiece/ChessPiece'
 import { findPosition, numPosition, printMovs, rellenarTablero, tablero } from './functions'
 
-export const Tablero = ({deletePice}) => {
+export const Tablero = ({deletePice,reset}) => {
   const colorTurn = document.querySelector(".turnColor")
 
   // use states
@@ -12,13 +12,13 @@ export const Tablero = ({deletePice}) => {
   const [useEffectActive, setUseEffectActive] = React.useState(false);//renderizar el tablero
   const [selectedPiece, setSelectedPiece] = React.useState(null); // Posición de la pieza seleccionada
   const [atacks, setAtacks] = React.useState([]); // posibles atakes de la pieza seleccionada
-  const [turn, setTurn] = React.useState("white"); // turno de juego [white,black
+  const [turn, setTurn] = React.useState("white"); // turno de juego [white,black]
 
 
   //use effect para rellenar el tablero
   useEffect(() => {
     setBoard(rellenarTablero(board))
-  }, []) // Se ejecuta solo al montar el componente
+  }, [reset]) // Se ejecuta solo al montar el componente
 
 
   //use effect para actualizar el tablero

@@ -1,11 +1,10 @@
-.damas{
+.damas_panel{
   position: absolute;
   top: 0;
   margin: 0 !important;
   width: 100%;
   height: 100%;
   /* max-height: 100vh; */
-  padding: 5%;
   display: flex;
   justify-content: center;
   margin-top: 5% ;
@@ -37,4 +36,24 @@
 }
 .black_turn{
   background-color: rgb(251, 68, 68);
+}
+
+.modalWin{
+  position: absolute;
+  top: 0;
+  margin: 0 !important;
+  width: 100%;
+  height: 100%;
+  /* max-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  margin-top: 5% ;
+  background-color: rgb(127, 91, 64);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  visibility: hidden;
 }

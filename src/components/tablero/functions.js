@@ -76,9 +76,11 @@ export function rellenarTablero(board){
         if(j%2 === 0){
           if(i===1){  //colocar fichan en las casillas inpares
             board[i][j].t = "white"
+            board[i][j].k = false
             return board[i][j]
           }
           board[i][j+1].t = "white"
+          board[i][j].k = false
           return board[i][j]
         }
         else{
@@ -91,9 +93,11 @@ export function rellenarTablero(board){
         if(j%2 === 0){
           if(i===6){
             board[i][j+1].t = "black"
+            board[i][j].k = false
             return board[i][j]
           }
           board[i][j].t = "black"
+          board[i][j].k = false
           return board[i][j]
         }
         else{
