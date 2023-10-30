@@ -1,0 +1,43 @@
+.chess-piece{
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chess-piece-k{
+  background-image: url("../../assets/img/RedKing.png");
+}
+.casilla-vacia{
+  width: 80px;
+  height: 80px;
+}
+.mov:after{
+  content:"";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #74db74a7 !important;
+}
+.atack:after{
+  content:"";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #db8074a7 !important;
+}
+
+.black{
+  background-image: url("../../assets/img/RedPice.png");
+}
+.white{
+  background-image: url("../../assets/img/WhitePice.png");
+}
+.black-k{
+  background-image: url("../../assets/img/RedKing.png");
+}
+.white-k{
+  background-image: url("../../assets/img/WhiteKing.png");
+}

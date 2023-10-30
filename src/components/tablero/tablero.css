@@ -1,0 +1,43 @@
+
+.tablero{
+  position: relative;
+  width: 640px;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  border: 10px solid #000000;
+}
+
+.tablero:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+
+.fila{
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100%;
+}
+
+.casilla{
+  width:  80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fila:nth-child(2n) .casilla:nth-child(2n){
+  background-color: #ccc;
+}
+.fila:nth-child(2n) .casilla:nth-child(2n+1){
+  background-color: #664e05;
+}
+.fila:nth-child(2n+1) .casilla:nth-child(2n){
+  background-color: #664e05;
+}
+.fila:nth-child(2n+1) .casilla:nth-child(2n+1){
+  background-color: #ccc;
+}
