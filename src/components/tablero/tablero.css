@@ -1,11 +1,11 @@
 
 .tablero{
   position: relative;
-  width: 640px;
-  height: 640px;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   border: 10px solid #000000;
+  overflow: hidden;
 }
 
 .tablero:after {
@@ -18,13 +18,12 @@
 .fila{
   display: flex;
   flex-direction: row;
-  height: 100px;
   width: 100%;
 }
 
 .casilla{
-  width:  80px;
-  height: 80px;
+  width:  10vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
