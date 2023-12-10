@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Tablero } from '../../components/tablero/Tablero';
 import './damas.css'
+import Header from '../../components/header/Header';
 
 const Damas = () => {
   const [white, serWhite] = useState(12);
@@ -21,11 +22,12 @@ const Damas = () => {
   }
   return (
     <div className='damas_panel'>      
+      <Header />
       <h1>Damas</h1>
       <div className='stats_tablero'>
         <div><div>fichas blancas</div><div>{white}</div></div>
         <div><div>turno de</div><div className='turnColor' id="turnColor"></div></div>
-        <div><div>fichas negras</div><div>{black}</div></div>
+        <div><div>fichas Rojas</div><div>{black}</div></div>
       </div>
       <Tablero deletePice={deletePice} reset={reset}/>
       <div className='modalWin'>{white=== 1 ? "white":"red"} win!<button onClick={()=>{

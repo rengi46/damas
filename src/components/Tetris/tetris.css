@@ -1,0 +1,15 @@
+.tetris{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}

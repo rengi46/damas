@@ -1,35 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './selectorGame.css'
 
-const SelectorGame = () => {
-  const [game, setGame] = React.useState('topos')
-  const descriptions = {
-    topos: 'Juego en el que tienes que matar la mayor cantidad de topos en 60 segundos',
-    damas: 'Juego de damas para dos jugadores'
-  }
+const SelectorGame = ({games}) => {
+    const [game, setGame] = React.useState(games[0])
 
-  document.addEventListener("keypress", (e) => {
-    console.log(e.key);
+
+
+
+
+
+    useEffect(() => {
+      const handleKeyDown = (e) => {
+        if(e.key === 'Enter'){
+          window.location.href = `/${game.attributes.Juego}`
+        }
+        console.log(game);
+        const indexGame = games.indexOf(game)
+        if (e.key === 's' && games[indexGame - 1] !== undefined) {
+          setGame(games[indexGame - 1]);
+        }
+        if (e.key === 'w' && games[indexGame + 1] !== undefined) {
+          setGame(games[indexGame + 1]);
+        }
+      };
   
-    if (e.key === 'Enter') {
-      if (game === 'topos') {
-        window.location.href = '/topos'
-      } else if (game === 'damas') {
-        window.location.href = '/damas'
-      }
-    }
-
-    if (e.key === 'w' || e.key === 's') {
-      console.log('cambio de juego');
-      if (game === 'topos') {
-        setGame('damas')
-      } else if (game === 'damas') {
-        setGame('topos')
-      } else {
-        setGame('topos')
-      }
-    }
-    })
+      document.addEventListener('keypress', handleKeyDown);
+  
+      return () => {
+        document.removeEventListener('keypress', handleKeyDown);
+      };
+    }, [game, games]);
   return (
     <div className='selector'>
       <div className='interiorTV'>
@@ -37,14 +37,19 @@ const SelectorGame = () => {
         <div className='contentTv'>
 
           <ul >
-            <li className={game === 'topos' ? "selectedLi" :""} ><a href="/topos">Topos</a></li>
-            <li  className={game === 'damas' ? "selectedLi" :""} ><a href="/damas">Damas</a></li>
+            {
+              games.map((gameData, i) => {
+                return (
+                  <li key={i} className={game.attributes.Juego === gameData.attributes.Juego ? "selectedLi" :""} ><a href={`/${gameData.attributes.Juego}`}>{gameData.attributes.Juego}</a></li>
+                )
+              })
+            }
           </ul>
           <div className='infoGame'>
-            <div className={'imgJuego '+game+"-game"}/>
+            {game.attributes?.imageJuego !== undefined &&  <img src={` http://localhost:1337${game.attributes?.imageJuego?.data?.attributes?.formats.small.url}`} alt=""/> }
+            <div className={'imgJuego '+"-game"}/>
             <div className='infoGameText'>
-              <p>{descriptions[game]}</p>
-
+              {/* <p>{game}</p> */}
             </div>
           </div>
         </div>
