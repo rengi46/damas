@@ -16,8 +16,7 @@ const Qrgame = ({ value }) => {
   const base64Points = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(pointsEncrypt));
   
   const URL = value+base64Game+"/"+base64Points+ "/"
-  console.log(URL);
-  const URLgood = "https://www.google.com/"
+
 
   return (
     <div>

@@ -6,9 +6,9 @@ import Damas from '../Damas/Damas';
 const Games = ({ gameType }) => {
   console.log(gameType);
   switch (gameType) {
-    case 'topos':
+    case 'Topos':
       return <Topos />;
-    case 'damas':
+    case 'Damas':
       return <Damas />;
     default:
       return <div>No game selected</div>;
