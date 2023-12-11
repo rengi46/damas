@@ -19,7 +19,7 @@ const Qrgame = ({ value }) => {
 
 
   return (
-    <div>
+    <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
       <QRCode value={URL} />
     </div>
   );
