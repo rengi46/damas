@@ -17,7 +17,7 @@ const Qrgame = ({ value }) => {
   
   const URL = value+base64Game+"/"+base64Points+ "/"
 
-
+  console.log(URL);
   return (
     <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
       <QRCode value={URL} />
