@@ -19,8 +19,9 @@ const Qrgame = ({ value }) => {
 
 
   return (
-    <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+    <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
       <QRCode value={URL} />
+      <h2>Regístrate para conseguir un regalo</h2>
     </div>
   );
 };

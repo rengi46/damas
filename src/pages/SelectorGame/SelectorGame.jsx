@@ -5,37 +5,33 @@ const SelectorGame = ({games}) => {
     const [game, setGame] = React.useState(games[0])
 
 
-
-
-
-
-    useEffect(() => {
-      const handleKeyDown = (e) => {
-        if(e.key === 'Enter'){
-          window.location.href = `/${game.attributes.Juego}`
-        }
-        console.log(game);
-        const indexGame = games.indexOf(game)
-        if (e.key === 's' && games[indexGame - 1] !== undefined) {
-          setGame(games[indexGame - 1]);
-        }
-        if (e.key === 'w' && games[indexGame + 1] !== undefined) {
-          setGame(games[indexGame + 1]);
-        }
-      };
+    // useEffect(() => {
+    //   const handleKeyDown = (e) => {
+    //     if(e.key === 'Enter'){
+    //       window.location.href = `/${game.attributes.Juego}`
+    //     }
+    //     console.log(game);
+    //     const indexGame = games.indexOf(game)
+    //     if (e.key === 's' && games[indexGame - 1] !== undefined) {
+    //       setGame(games[indexGame - 1]);
+    //     }
+    //     if (e.key === 'w' && games[indexGame + 1] !== undefined) {
+    //       setGame(games[indexGame + 1]);
+    //     }
+    //   };
   
-      document.addEventListener('keypress', handleKeyDown);
+    //   document.addEventListener('keypress', handleKeyDown);
   
-      return () => {
-        document.removeEventListener('keypress', handleKeyDown);
-      };
-    }, [game, games]);
+    //   return () => {
+    //     document.removeEventListener('keypress', handleKeyDown);
+    //   };
+    // }, [game, games]);
+    console.log(game);
   return (
     <div className='selector'>
       <div className='interiorTV'>
         <h1>SelectorGame</h1>
         <div className='contentTv'>
-
           <ul >
             {
               games.map((gameData, i) => {
@@ -46,10 +42,10 @@ const SelectorGame = ({games}) => {
             }
           </ul>
           <div className='infoGame'>
-            {game.attributes?.imageJuego !== undefined &&  <img src={` http://localhost:1337${game.attributes?.imageJuego?.data?.attributes?.formats.small.url}`} alt=""/> }
+            {game?.attributes?.imageJuego !== undefined &&  <img src={` http://localhost:1337${game.attributes?.imageJuego?.data?.attributes?.formats.small.url}`} alt=""/> }
             <div className={'imgJuego '+"-game"}/>
             <div className='infoGameText'>
-              {/* <p>{game}</p> */}
+              <p>{game?.attributes?.description}</p>
             </div>
           </div>
         </div>
