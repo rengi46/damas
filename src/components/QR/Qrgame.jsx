@@ -21,11 +21,15 @@ const Qrgame = ({ value }) => {
 
   setTimeout(() => {
     navigate("/")
-  }, 5000);
+  }, 15000);
+
+  const handleOnClick = () => {
+    navigate("/")
+  }
 
   console.log(URL);
   return (
-    <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
+    <div onClick={handleOnClick} style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
       <QRCode value={URL} />
       <h2>Regístrate para conseguir un regalo</h2>
     </div>
