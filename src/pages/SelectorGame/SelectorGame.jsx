@@ -42,7 +42,7 @@ const SelectorGame = ({games}) => {
             }
           </ul>
           <div className='infoGame'>
-            {game?.attributes?.imageJuego !== undefined &&  <img src={` http://localhost:1337${game.attributes?.imageJuego?.data?.attributes?.formats.small.url}`} alt=""/> }
+            {game?.attributes?.imageJuego !== undefined &&  <img src={`${game.attributes?.imageJuego?.data?.attributes?.url}`} alt=""/> }
             <div className={'imgJuego '+"-game"}/>
             <div className='infoGameText'>
               <p>{game?.attributes?.description}</p>
