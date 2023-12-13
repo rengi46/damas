@@ -1,9 +1,11 @@
 import React from 'react';
 import QRCode from 'qrcode.react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import CryptoJS from 'crypto-js';
 
 const Qrgame = ({ value }) => {
+
+  const navigate = useNavigate();
 
   const secret = "phygitalKey";
   const params = useParams();
@@ -16,6 +18,10 @@ const Qrgame = ({ value }) => {
   const base64Points = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(pointsEncrypt));
   
   const URL = value+base64Game+"/"+base64Points+ "/"
+
+  setTimeout(() => {
+    navigate("/")
+  }, 5000);
 
   console.log(URL);
   return (
