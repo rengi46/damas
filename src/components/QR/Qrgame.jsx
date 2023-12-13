@@ -21,7 +21,7 @@ const Qrgame = ({ value }) => {
 
   setTimeout(() => {
     navigate("/")
-  }, 15000);
+  }, 30000);
 
   const handleOnClick = () => {
     navigate("/")

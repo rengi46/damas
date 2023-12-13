@@ -29,6 +29,7 @@ const SelectorGame = ({games}) => {
     console.log(game);
   return (
     <div className='selector'>
+      <h2>Obtener la mejor marca en la oficina y ganar una taza.</h2>
       <div className='interiorTV'>
         <h1>SelectorGame</h1>
         <div className='contentTv'>
