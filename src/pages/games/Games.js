@@ -2,6 +2,7 @@
 import React from 'react';
 import { Topos } from '../Topos/Topos';
 import Damas from '../Damas/Damas';
+import PulpoGame from '../pulpoGame/PulpoGame';
 
 const Games = ({ gameType }) => {
   console.log(gameType);
@@ -10,6 +11,8 @@ const Games = ({ gameType }) => {
       return <Topos />;
     case 'Damas':
       return <Damas />;
+    case 'pulpo':
+      return <PulpoGame />;
     default:
       return <div>No game selected</div>;
   }
