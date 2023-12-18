@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.656e07c2.css",
-    "main.js": "/static/js/main.631fb924.js",
+    "main.js": "/static/js/main.948de67c.js",
     "static/media/topos.PNG": "/static/media/topos.3e078b67d674ddc251ce.PNG",
     "static/media/television.jpg": "/static/media/television.8bcf91e47fef8bcb662d.jpg",
     "index.html": "/index.html",
     "main.656e07c2.css.map": "/static/css/main.656e07c2.css.map",
-    "main.631fb924.js.map": "/static/js/main.631fb924.js.map"
+    "main.948de67c.js.map": "/static/js/main.948de67c.js.map"
   },
   "entrypoints": [
     "static/css/main.656e07c2.css",
-    "static/js/main.631fb924.js"
+    "static/js/main.948de67c.js"
   ]
 }
