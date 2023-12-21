@@ -1,4 +1,8 @@
-
+[[headers]]
+  for = "/*"
+    [headers.values]
+    X-Frame-Options = "ALLOW-FROM https://tu-sitio-web.com"
+    
 [[headers]]
   for = "/*.wasm"
     [headers.values]
