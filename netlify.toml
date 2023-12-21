@@ -1,8 +1,9 @@
 [[headers]]
   for = "/*"
     [headers.values]
-    X-Frame-Options = "ALLOW-FROM https://tu-sitio-web.com"
-    
+    X-Frame-Options = "ALLOW-FROM https://main--classy-monstera-b42bc3.netlify.app/"
+    X-Frame-Options = "ALLOW-FROM https://mellow-platypus-c20d1e.netlify.app"
+
 [[headers]]
   for = "/*.wasm"
     [headers.values]
