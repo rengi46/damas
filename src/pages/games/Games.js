@@ -12,22 +12,21 @@ const Games = ({ gameType }) => {
   const actaualGame = value.filter(element => {
     return element.attributes.Juego === gameType;
   });
-  console.log(actaualGame);
-  // return(
-  //   <Game src={actaualGame[0].attributes.url}/>
-  // )
+  return(
+    <Game src={actaualGame[0].attributes.url}/>
+  )
 
-  console.log(gameType);
-  switch (gameType) {
-    case 'Topos':
-      return <Topos />;
-    case 'Damas':
-      return <Damas />;
-    case 'Pulpos':
-      return <PulpoGame />;
-    default:
-      return <div>No game selected</div>;
-  }
+  // console.log(gameType);
+  // switch (gameType) {
+  //   case 'Topos':
+  //     return <Topos />;
+  //   case 'Damas':
+  //     return <Damas />;
+  //   case 'Pulpos':
+  //     return <PulpoGame />;
+  //   default:
+  //     return <div>No game selected</div>;
+  // }
 };
 
 export default Games;
@@ -47,7 +46,7 @@ export const Game = ({src}) => {
   return (
     <div style={style}>
       <Header/>
-      <iframe src={src} width="100%" height="60%"></iframe>
+      <iframe title='game' src={src} width="100%" height="70%"></iframe>
     </div>
   )
 }

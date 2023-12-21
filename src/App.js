@@ -12,11 +12,7 @@ import { GeneralContext } from './context/GeneralContext';
 
 
 function App() {
-
-
-
   const [juegos, setJuegos] = useState([]);
-
   const value = useContext(GeneralContext);
   useEffect(() => {
     setJuegos(value);
