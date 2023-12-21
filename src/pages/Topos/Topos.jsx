@@ -18,7 +18,7 @@ export const Topos = () => {
   return (
     <div style={style}>
       <Header/>
-      <iframe src="https://mellow-platypus-c20d1e.netlify.app" width="100%" height="60%"></iframe>
+      <iframe title='topos' src="https://mellow-platypus-c20d1e.netlify.app/index.html" width="100%" height="60%" allow-same-origin ></iframe>
     </div>
   )
 }
