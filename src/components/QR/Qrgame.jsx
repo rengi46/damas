@@ -1,4 +1,5 @@
 import React from 'react';
+import "./qrWin.css";
 import QRCode from 'qrcode.react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CryptoJS from 'crypto-js';
@@ -29,10 +30,29 @@ const Qrgame = ({ value }) => {
 
   console.log(URL);
   return (
-    <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
-      <QRCode value={URL} />
-      <h2>Regístrate para conseguir un regalo</h2>
-      <button onClick={handleOnClick}>Volver</button>
+    <div className='QRWin' style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
+      <div className='modalWinQr'>
+        <div className='headerWinQr'>
+          <div className='startsQrWin'></div>
+          <div className='ribbonQrWin'>
+            <h3>Felicitaciones</h3>
+          </div>
+
+
+        </div>
+        <div className='contentWinQr'>
+          <div className='scoreQrWin'>
+            <p>Score</p>
+            <div>{params.points}</div>
+          </div>
+          <div className='codeQR'>
+            <h4>Pilla tu recompensa</h4>
+          <QRCode value={URL} />
+
+          </div>
+          <button className='btnWinQR' onClick={handleOnClick}>Volver</button>
+        </div>
+      </div>  
     </div>
   );
 };

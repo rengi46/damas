@@ -5,50 +5,34 @@ const SelectorGame = ({games}) => {
     const [game, setGame] = React.useState(games[0])
 
 
-    // useEffect(() => {
-    //   const handleKeyDown = (e) => {
-    //     if(e.key === 'Enter'){
-    //       window.location.href = `/${game.attributes.Juego}`
-    //     }
-    //     console.log(game);
-    //     const indexGame = games.indexOf(game)
-    //     if (e.key === 's' && games[indexGame - 1] !== undefined) {
-    //       setGame(games[indexGame - 1]);
-    //     }
-    //     if (e.key === 'w' && games[indexGame + 1] !== undefined) {
-    //       setGame(games[indexGame + 1]);
-    //     }
-    //   };
-  
-    //   document.addEventListener('keypress', handleKeyDown);
-  
-    //   return () => {
-    //     document.removeEventListener('keypress', handleKeyDown);
-    //   };
-    // }, [game, games]);
-    console.log(game);
   return (
     <div className='selector'>
-      <h2>Obtener la mejor marca en la oficina y ganar una taza.</h2>
       <div className='interiorTV'>
-        <h1>SelectorGame</h1>
-        <div className='contentTv'>
-          <ul >
+        <div className='headerRojo'>
+          <h3>Menu</h3>
+        </div>
+        <div className='contentTv'>  
             {
               games.map((gameData, i) => {
+                console.log(gameData);
+                const style = {
+                  backgroundImage: `url(${gameData.attributes.imageJuego?.data?.attributes?.url})`,
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center center',
+                }
                 return (
-                  <li key={i} className={game.attributes.Juego === gameData.attributes.Juego ? "selectedLi" :""} ><a href={`/${gameData.attributes.Juego}`}>{gameData.attributes.Juego}</a></li>
+                  <div style={style} key={i} className={"gameSelect"} ><a href={`/${gameData.attributes.Juego}`}>{gameData.attributes.Juego}</a></div>
                 )
               })
             }
-          </ul>
-          <div className='infoGame'>
+          {/* <div className='infoGame'>
             {game?.attributes?.imageJuego !== undefined &&  <img src={`${game.attributes?.imageJuego?.data?.attributes?.url}`} alt=""/> }
             <div className={'imgJuego '+"-game"}/>
             <div className='infoGameText'>
               <p>{game?.attributes?.description}</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

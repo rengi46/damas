@@ -1,39 +1,48 @@
 .selector{
   height: 100%;
-  background-image: url("../../assets/img/television.jpg");
-  background-size: contain;
+  background: radial-gradient(129.87% 67.91% at 50% 32.09%, #7AD5E9 0%, #6380E9 100%);
+  /* background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   display:flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .interiorTV{
-  height: 30%;
-  width: 40%;
-  margin: auto;
-  padding: 40px;
-  padding-top: 7%;
-  padding-right: 12%;
+  height: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  /* align-items: center;  */
+  justify-content: center; 
+  gap: 20px;
 }
 
-.interiorTV h1{
-  font-size: 3rem;
-  color: white;
-  text-align: center;
-  margin-bottom: 10%;
-}
+
 .contentTv{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
+  height: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 25px;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .contentTv{
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 25px;
+    width: 100%;
+  }
+  .gameSelect a{
+    font-size: 1rem !important;
+  }
+  
 }
 
 .infoGame{
@@ -67,23 +76,30 @@
   background-repeat: no-repeat;
 }
 
-.contentTv ul{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-}
-.contentTv ul li{
-  text-align: center;
-  padding: 3px;
-  list-style: none;
-  font-size: 2rem;
+.gameSelect{
   width: 100%;
-  color: white;
-  margin-bottom: 10%;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  height: 100%;
+  background-color: rgb(189, 189, 189);
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+}
+.gameSelect a{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFF; 
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  font-family: Chango;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.72px;
+  text-transform: uppercase;
 }
 
 .selectedLi{
@@ -101,4 +117,17 @@
   color: white;
   text-align: center;
   font-size: 1.2rem;
+}
+
+.headerRojo{
+  background-color: #E94F37;
+  width: 100px;
+  height: 26px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #e5e5e5;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
 }

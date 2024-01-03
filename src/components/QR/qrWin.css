@@ -1,0 +1,132 @@
+.QRWin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(129.87% 67.91% at 50% 32.09%, #7AD5E9 0%, #6380E9 100%);
+}
+.modalWinQr{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: radial-gradient(129.87% 67.91% at 50% 32.09%, #7AD5E9 0%, #6380E9 100%); */
+  width: 70%;
+  height: 70%;
+}
+
+.headerWinQr{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-image: url('../../assets/img/Vector9.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 50px;
+}
+.startsQrWin{
+  width: 100%;
+  height: 40%;
+  background-image: url('../../assets/img/star_ing.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.ribbonQrWin{
+  width: 100%;
+  height: 40%;
+  background-image: url('../../assets/img/ribbon.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.ribbonQrWin h3 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 45px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+.contentWinQr{
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  height: 80%;
+  gap: 20px;
+  box-shadow: 1px 3px 1px 1px rgba(211, 216, 255, 1);
+  border-radius: 3px;
+}
+
+.scoreQrWin p{
+  color: #60CFFF;
+  text-align: center;
+  font-family: Calibri;
+  font-size: 1.4rem;  
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.scoreQrWin div{
+  background-color: rgba(194, 253, 255, 1);
+  color: rgba(34, 138, 237, 1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Calibri;
+  font-size: 1.4rem;  
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.btnWinQR{
+  background-color: rgba(154, 74, 254, 1);
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: Calibri;
+  font-size: 1.4rem;  
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 1px 2px 1px 1px rgba(112, 49, 252, 1);
+}
+
+.codeQR{
+  text-align: center;
+  font-weight: normal;
+}
+.codeQR h4{
+  margin: 2px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
