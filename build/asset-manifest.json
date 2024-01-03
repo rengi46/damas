@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.656e07c2.css",
-    "main.js": "/static/js/main.31ea2882.js",
+    "main.css": "/static/css/main.81394ba5.css",
+    "main.js": "/static/js/main.1b3fa93f.js",
     "static/media/topos.PNG": "/static/media/topos.3e078b67d674ddc251ce.PNG",
-    "static/media/television.jpg": "/static/media/television.8bcf91e47fef8bcb662d.jpg",
+    "static/media/Vector9.png": "/static/media/Vector9.12780f9ac63388484708.png",
+    "static/media/ribbon.png": "/static/media/ribbon.8c2cf1654d82696ffaaa.png",
+    "static/media/star_ing.png": "/static/media/star_ing.a2267537d1bd38e17209.png",
     "index.html": "/index.html",
-    "main.656e07c2.css.map": "/static/css/main.656e07c2.css.map",
-    "main.31ea2882.js.map": "/static/js/main.31ea2882.js.map"
+    "main.81394ba5.css.map": "/static/css/main.81394ba5.css.map",
+    "main.1b3fa93f.js.map": "/static/js/main.1b3fa93f.js.map"
   },
   "entrypoints": [
-    "static/css/main.656e07c2.css",
-    "static/js/main.31ea2882.js"
+    "static/css/main.81394ba5.css",
+    "static/js/main.1b3fa93f.js"
   ]
 }
