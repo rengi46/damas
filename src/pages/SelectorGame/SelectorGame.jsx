@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
 import './selectorGame.css'
+import { useNavigate } from 'react-router-dom'
 
 const SelectorGame = ({games}) => {
     const [game, setGame] = React.useState(games[0])
+
+    const navegation = useNavigate()
 
 
   return (
@@ -22,7 +25,7 @@ const SelectorGame = ({games}) => {
                   backgroundPosition: 'center center',
                 }
                 return (
-                  <div style={style} key={i} className={"gameSelect"} ><a href={`/${gameData.attributes.Juego}`}>{gameData.attributes.Juego}</a></div>
+                  <div onClick={()=>{navegation(`/${gameData.attributes.Juego}`)}} style={style} key={i} className={"gameSelect"} ><a href={`/${gameData.attributes.Juego}`}>{gameData.attributes.Juego}</a></div>
                 )
               })
             }
