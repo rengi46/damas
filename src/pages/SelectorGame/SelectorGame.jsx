@@ -23,6 +23,7 @@ const SelectorGame = ({games}) => {
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center center',
+                  cursor: 'pointer'
                 }
                 return (
                   <div onClick={()=>{navegation(`/${gameData.attributes.Juego}`)}} style={style} key={i} className={"gameSelect"} ><a href={`/${gameData.attributes.Juego}`}>{gameData.attributes.Juego}</a></div>
