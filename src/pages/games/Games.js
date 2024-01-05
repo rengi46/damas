@@ -33,11 +33,10 @@ export const Game = ({src}) => {
     alignItems: 'center',
   }
 
-  // window.location.replace(src);
   return (
     <div style={style}>
       <Header/>
-      <iframe title='game' src={src} width="100%" height="70%"></iframe>
+      <iframe title='game' src={src} width="100%" height="90%"></iframe>
     </div>
   )
 }
