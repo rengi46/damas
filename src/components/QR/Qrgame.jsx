@@ -21,14 +21,13 @@ const Qrgame = ({ value }) => {
   const URL = value+base64Game+"/"+base64Points+ "/"
 
   setTimeout(() => {
-    navigate("/")
+    navigate("/Clean%20Ocean")
   }, 30000);
 
   const handleOnClick = () => {
     navigate("/")
   }
 
-  console.log(URL);
   return (
     <div className='QRWin' style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
       <div className='modalWinQr'>
