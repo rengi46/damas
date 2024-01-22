@@ -25,7 +25,7 @@ const Qrgame = ({ value }) => {
   }, 30000);
 
   const handleOnClick = () => {
-    navigate("/")
+    navigate("/Clean%20Ocean")
   }
 
   return (
