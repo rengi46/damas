@@ -17,11 +17,11 @@ function App() {
   useEffect(() => {
     setJuegos(value);
   }, [value]);
-
+  if(juegos.length === 0) return (<div>Loading...</div>)
+  console.log(juegos[0]);
   return (
-    
       <Routes>
-        {juegos.length > 0? <Route path="/"  element={<SelectorGame games={juegos}/>} />:null }
+        {juegos.length > 1? <Route path="/"  element={<SelectorGame games={juegos}/>} />:<Route path="/"  element={<Games gameType={juegos[0]?.attributes?.Juego}/>}/> }
         {
           juegos && juegos.map((juego, index) => {
             return <Route key={index} path={`/${juego.attributes.Juego}`} element={<Games gameType={juego.attributes.Juego}/>}/>

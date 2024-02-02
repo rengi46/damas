@@ -10,6 +10,7 @@ const Games = ({ gameType }) => {
   const value = useContext(GeneralContext);
   if(value.length === 0) return (<div>Loading...</div>)
   const actaualGame = value.filter(element => {
+    console.log("element", element);
     return element.attributes.Juego === gameType;
   });
   return(
